@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="robots" content="noindex, nofollow">
+  <title>Janaaa's Heartbeat Journey</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(-45deg, #3d1c42, #6d327d, #cc367e, #7e235b);
+      background-size: 800% 800%;
+      animation: bgFlow 20s ease infinite;
+      font-family: 'Segoe UI', sans-serif;
+      color: #f3f3f3;
+      overflow: hidden;
+    }
+
+    @keyframes bgFlow {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    .container {
+      max-width: 750px;
+      margin: 80px auto;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 40px;
+      border-radius: 25px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      position: relative;
+    }
+
+    .memory-box {
+      display: none;
+      font-size: 1.3rem;
+      color: #fbe6f6;
+      position: relative;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    .memory-box.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+
+    .emoji-reveal {
+      position: absolute;
+      top: -25px;
+      right: 20px;
+      font-size: 1.8rem;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .emoji-reveal:hover {
+      transform: scale(1.2);
+    }
+
+    .secret {
+      display: none;
+      font-size: 1rem;
+      margin-top: 15px;
+      color: #ffe3f1;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    .next-button {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 10px 30px;
+      font-size: 1rem;
+      color: white;
+      background: #ff4d8a;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(255, 77, 138, 0.5);
+      transition: background 0.3s ease;
+    }
+
+    .next-button:hover {
+      background: #e63870;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #e6cce6;
+      background-color: rgba(0, 0, 0, 0.3);
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      z-index: 3;
+    }
+
+    .star {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: white;
+      border-radius: 50%;
+      box-shadow: 0 0 8px white;
+      animation: twinkle 3s infinite ease-in-out;
+      opacity: 0.5;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.2; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.4); }
+    }
+  </style>
+</head>
+<body>
+
+<script>
+  // Add sparkles
+  for (let i = 0; i < 60; i++) {
+    const star = document.createElement("div");
+    star.className = "star";
+    star.style.left = Math.random() * window.innerWidth + "px";
+    star.style.top = Math.random() * window.innerHeight + "px";
+    star.style.animationDuration = (2 + Math.random() * 3) + "s";
+    document.body.appendChild(star);
+  }
+</script>
+
+<div class="container">
+  <h1>onnu rendu flashbackss 💖</h1>
+  <p>“These memories still make me smile like a fool — hope they do the same for you! And hey, ovvoru pagelayu side la emoji irukum amukka maranthuradhaa😜 <br>emoji ah sonne😂</p>
+
+  <!-- Memory Sections -->
+  <div class="memory-box active" id="memory0">
+    
+  </div>
+
+  <div class="memory-box" id="memory1">
+    Do you remember the very first time you talked to me in person?
+    Because I do. Vividly.
+    It’s like a little movie clip that still plays in my mind —  zoomed in on your baby face😏
+
+    It was way back in 2020, right?
+    You walked up, looking all shy but trying to act cool 
+    And then came that question...
+    "Are you committed or single?"
+    Ohhh, I still remember thatt, i was super shocked and  didn’t know whether to laugh or blush.
+    Now look at us 😂 😂 What an upgrade...
+    <div class="emoji-reveal" onclick="revealSecret(1)">😜</div>
+    <div class="secret" id="secret1">But here’s the part I never told you...I had a tiny spark for youu😜 <br> nalla thaaa irunchii.</div>
+  </div>
+
+  <div class="memory-box" id="memory2">
+    those tuition classes
+    I didn’t have many friends
+    But sometimes… sometimes I’d catch a glimpse of you.
+
+    You’d be standing near the tuition, eyes casually drifting my way.
+    And me?
+    I'd pretend not to notice, but still hold that eye contact just a little longer than necessary.
+
+    I don’t know why, 
+    They felt nice... simple
+    What’s funny is... we used to text back then.
+    We knew each other.
+    But still, I never talked to you in person until you talked to me💝
+    <div class="emoji-reveal" onclick="revealSecret(2)">😜</div>
+    <div class="secret" id="secret2">Thought you were an innocent boy… then I discovered your not-so-innocent side — and honestly,ne oru kallabaduwa</div>
+  </div>
+
+  <div class="memory-box" id="memory3">
+    Who knew a ‘just friend’ would turn into my favorite late-night habit? That first sexting night....<br>We had boundaries at first, but well… time turned those boundaries into no boundaries!<br> i still cant believe the first time we went till 5 a.m. like it was nothing.<br> Funny thing is, talking to you normally—without all the dirty talk—felt like I was chatting with a total stranger lol🫂
+    <div class="emoji-reveal" onclick="revealSecret(3)">🍭</div>
+    <div class="secret" id="secret3">btw i am a big fan of ur lolipop🍭❤️</div>
+  </div>
+
+  <div class="memory-box" id="memory4">
+    Those firsts? Ugh, unforgettable.<br> That kiss, that hug, that first touch — still gives me butterflies.<br> Not sure how you feel, but for me… <br> they’re moments I’ll never stop cherishing
+    <div class="emoji-reveal" onclick="revealSecret(4)">💓</div>
+    <div class="secret" id="secret4"> now I’m just greedy for more memories with you 💓</div>
+  </div>
+
+  <button class="next-button" onclick="showNextMemory()">Next</button>
+</div>
+
+<footer>✨f*ck youuuuuuu✨</footer>
+
+<script>
+  let current = 0;
+
+  function revealSecret(index) {
+    document.getElementById("secret" + index).style.display = "block";
+  }
+
+  function showNextMemory() {
+    const currentBox = document.getElementById("memory" + current);
+    if (currentBox) currentBox.classList.remove("active");
+
+    current++;
+    const nextBox = document.getElementById("memory" + current);
+
+    if (nextBox) {
+      nextBox.classList.add("active");
+    } else {
+      // If no more memories, maybe redirect or disable
+      alert("ithula avalothaan. press ok💖");
+      window.location.href = "3rdpage.html";
+    }
+  }
+</script>
+
+</body>
+</html>

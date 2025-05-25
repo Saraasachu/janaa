@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="robots" content="noindex, nofollow">
+  <title>With All My Heart 💖</title>
+  <meta name="robots" content="noindex, nofollow">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(-45deg, #3d1c42, #6d327d, #cc367e, #7e235b);
+      background-size: 600% 600%;
+      animation: bgFlow 20s ease infinite;
+      font-family: 'Segoe UI', sans-serif;
+      color: #fce4f6;
+      overflow: hidden;
+      position: relative;
+    }
+
+    @keyframes bgFlow {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 100px auto;
+      padding: 60px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 25px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 35px rgba(0, 0, 0, 0.4);
+      text-align: center;
+      position: relative;
+      animation: fadeIn 2s ease;
+      z-index: 2;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      animation: fadeUp 2s ease-out forwards;
+    }
+
+    p {
+      font-size: 1.3rem;
+      margin-top: 20px;
+      line-height: 1.6;
+      animation: fadeUp 3s ease-out forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeUp {
+      0% { transform: translateY(40px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    .floating-heart {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Heart_icon_red_hollow.svg/2048px-Heart_icon_red_hollow.svg.png') no-repeat center;
+      background-size: contain;
+      animation: float 6s ease-in-out infinite;
+      opacity: 0.4;
+      z-index: 0;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0) scale(1); opacity: 0.2; }
+      50% { transform: translateY(-20px) scale(1.2); opacity: 1; }
+      100% { transform: translateY(0) scale(1); opacity: 0.2; }
+    }
+
+    .surprise {
+      margin-top: 30px;
+      font-size: 2rem;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    .surprise:hover {
+      transform: scale(1.2);
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    .secret-message {
+      display: none;
+      margin-top: 20px;
+      font-style: italic;
+      color: #ffd8f1;
+      animation: fadeInSecret 1s ease forwards;
+    }
+
+    @keyframes fadeInSecret {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      padding: 15px;
+      text-align: center;
+      color: #f0d9e6;
+      font-size: 14px;
+      background: rgba(0, 0, 0, 0.2);
+      z-index: 2;
+      animation: fadeIn 4s ease forwards;
+    }
+
+    /* 🎈 Balloon Styles */
+    .balloon {
+      position: absolute;
+      width: 25px;
+      height: 35px;
+      background: radial-gradient(circle, #ff8ac5 20%, #ff3e9d 100%);
+      border-radius: 50% 50% 50% 50%;
+      animation: balloonFloat 12s linear infinite;
+      opacity: 0.7;
+      z-index: 0;
+    }
+
+    @keyframes balloonFloat {
+      0% {
+        bottom: -50px;
+        transform: translateX(0) rotate(0deg);
+      }
+      50% {
+        transform: translateX(30px) rotate(5deg);
+      }
+      100% {
+        bottom: 110%;
+        transform: translateX(-30px) rotate(-5deg);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h4>sari sari ithuthan last page. lol</h4>
+  <p>
+    Just a little something to make you smile, Jana.<br />
+    Maybe it seems a little childish, but it’s from the heart.<br>You’re the reason my face hurts from smiling so much.<br> Keep being your hilarious self—<br>I got your back, always. <br>Stay my little baby.okayy? Mmwaahh💕</p>
+
+  <div class="surprise" onclick="revealWish()">🎁 Tap for a surprise</div>
+  <div class="secret-message" id="secret">
+    podaaaa pundaaaaa. <br> tataa😂
+  </div>
+</div>
+
+<footer>🌌 love youu to the moon and backk(unmaikum tha solre😂)💞 🌌</footer>
+
+<script>
+  function revealWish() {
+    const msg = document.getElementById('secret');
+    msg.style.display = 'block';
+    msg.style.animation = 'fadeInSecret 1s ease forwards';
+  }
+
+  // Floating hearts
+  for (let i = 0; i < 20; i++) {
+    const heart = document.createElement("div");
+    heart.className = "floating-heart";
+    heart.style.left = Math.random() * window.innerWidth + "px";
+    heart.style.top = Math.random() * window.innerHeight + "px";
+    heart.style.animationDelay = (Math.random() * 5) + "s";
+    document.body.appendChild(heart);
+  }
+
+  // 🎈 Balloons
+  for (let i = 0; i < 15; i++) {
+    const balloon = document.createElement("div");
+    balloon.className = "balloon";
+    balloon.style.left = Math.random() * window.innerWidth + "px";
+    balloon.style.animationDelay = (Math.random() * 10) + "s";
+    balloon.style.background = `radial-gradient(circle, hsl(${Math.random() * 360}, 80%, 70%) 20%, hsl(${Math.random() * 360}, 100%, 50%) 100%)`;
+    document.body.appendChild(balloon);
+  }
+</script>
+
+</body>
+</html>

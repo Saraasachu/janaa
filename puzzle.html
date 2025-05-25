@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Birthday Puzzle</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: radial-gradient(#ffd3e0, #ffeaea, #fff);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+      text-align: center;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      color: #a83279;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #444;
+      margin-bottom: 30px;
+      max-width: 600px;
+    }
+
+    .puzzle-box {
+      background: #fff;
+      padding: 30px 40px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      max-width: 500px;
+      width: 100%;
+      position: relative;
+      z-index: 2;
+    }
+
+    .question {
+      font-size: 1.2rem;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    input[type="text"] {
+      padding: 10px 20px;
+      border-radius: 30px;
+      border: 2px solid #ff69b4;
+      width: 100%;
+      margin-bottom: 20px;
+      font-size: 1rem;
+      outline: none;
+    }
+
+    button {
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      padding: 10px 30px;
+      font-size: 1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e95fa3;
+      transform: scale(1.05);
+    }
+
+    .result {
+      margin-top: 15px;
+      font-weight: bold;
+      color: #a83279;
+    }
+
+    /* Bokeh circles background animation */
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 105, 180, 0.2);
+      animation: floatBokeh 20s linear infinite;
+    }
+
+    @keyframes floatBokeh {
+      0% {
+        transform: translateY(0) scale(0.5);
+        opacity: 0.7;
+      }
+      100% {
+        transform: translateY(-100vh) scale(1.5);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Just One Little Puzzle 💭</h1>
+  <p>Okayy! next page poga modha ithuku answer sollu papoo 😉<br> nee solla maata</p>
+
+  <div class="puzzle-box">
+    <div class="question">What color was my T-shirt when we first met? 👕💭 I know you probably don’t remember, but c’mon, give it a try — lol 😜💗</div>
+    <input type="text" id="answer" placeholder="Your answer here..." />
+    <button onclick="checkAnswer()">Submit</button>
+    <div class="result" id="result"></div>
+  </div>
+
+  <!-- Bokeh circles animation -->
+  <script>
+    // Create random bokeh circles
+    function createCircle() {
+      const circle = document.createElement('div');
+      const size = Math.random() * 60 + 20;
+      circle.classList.add('circle');
+      circle.style.width = `${size}px`;
+      circle.style.height = `${size}px`;
+      circle.style.left = `${Math.random() * 100}%`;
+      circle.style.bottom = `-100px`;
+      circle.style.animationDuration = `${15 + Math.random() * 10}s`;
+      document.body.appendChild(circle);
+      setTimeout(() => circle.remove(), 20000);
+    }
+
+    setInterval(createCircle, 500);
+
+    // Puzzle answer checker
+    function checkAnswer() {
+      const input = document.getElementById('answer').value.trim().toLowerCase();
+      const result = document.getElementById('result');
+      if (input === 'brown') {
+        result.innerHTML = 'ammatasiri 🎉 sariyaana badhil';
+        setTimeout(() => {
+          location.href = 'memory.html'; // update with your next HTML file
+        }, 2000);
+      } else {
+        result.innerHTML = 'gammathinga! pila oi😅';
+      }
+    }
+  </script>
+
+</body>
+</html>
